@@ -5,23 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="">
-        <label for="todo">To-do list</label><br>
-        <ul>
-            <li>Make sure to drink water</li> <button>Done</button><button>Delete</button>
-            <li>Make sure to drink water</li> <button>Done</button><button>Delete</button>
-            <li>Make sure to drink water</li> <button>Done</button><button>Delete</button>
-            <li>Make sure to drink water</li> <button>Done</button><button>Delete</button>
-            <li>Make sure to drink water</li> <button>Done</button><button>Delete</button>
-        </ul>
-        <input type="text" id="entry" name="entry"  value="">
-     
-        <input type="submit" value="Submit"> <!--Submit   -->
-        
-      </form>
-      <script src="script.js"></script> 
+    <div class="container">
+      <!--title-->
+        <h1>To Do List</h1>
+            <!--input area-->
+        <div id="newtask">
+            <input type="text" placeholder="Task to be done..">
+            <button id="push">Add</button>
+        </div>     
+      <!--task list area-->
+        <div id="tasks"></div>
+    </div>
+<script src="script.js"></script>
       <script src="test.js"></script>
 </body>
 </html>
