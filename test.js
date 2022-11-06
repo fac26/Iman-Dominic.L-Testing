@@ -12,3 +12,23 @@ test("Checking an entry marks it as complete", () => {
 test("Deleting an entry removes it from the list", () => {
   // test goes here
 });
+
+// testing if inputted content appears in to do list
+function test(){
+  const input = document.querySelector("input"); 
+  input.value = "test"; 
+  const submitButton = document.querySelector("button[id='push']");
+  submitButton.click(); 
+  const result = document.querySelector("#taskname");
+  equal(result.textContent, "test"); 
+};
+
+function equal(actual, expected) {
+  if (actual === expected) {
+    console.info(`Pass: Expected ${expected} and received ${actual}`);
+  } else {
+    console.error(`Fail: Expected ${expected} but received ${actual} instead`);
+  }
+}
+
+test();
