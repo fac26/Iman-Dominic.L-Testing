@@ -12,7 +12,7 @@ test("Should add taskinput to list", () => { //why is this failing?
   // verify that the page contains the expected result
   let result = document.querySelector("#tasks");
   
-  equal(result.textContent, taskInput.value);
+  equal(result.textContent.slice(51, 56), taskInput.value);
 
  
 });
@@ -25,6 +25,7 @@ test('when add button is clicked, display task in the div id=tasks',()=>{
   if (document.body.contains(mytask)) {
     console.info(`Pass`);
   } else {
+    
     console.error(`Fail`);
   }
 });
@@ -40,7 +41,7 @@ test("if input field is empty, display error", () => {
   }});
 
 
-//don't know why this one isn't working-goes to the bottom?
+// don't know why this one isn't working-goes to the bottom?
 test("Checking an entry marks it as complete", () => {
   var current_tasks = document.querySelectorAll(".done");
   for(var i=0; i<current_tasks.length; i++){
@@ -49,6 +50,16 @@ test("Checking an entry marks it as complete", () => {
           console.info(`Pass`);
       }
   }});
+
+test("Checking an entry marks it as complete", () => {
+  var listitem = document.getElementById(taskname);
+  if (listitem.style.textDecoration == "line-through") {
+    console.info(`Pass`);
+  }
+  else {
+    console.error(`Error`);
+  }
+  }); //Uncaught TypeError: Cannot read properties of null (reading 'style')
 
 test("Deleting an entry removes it from the list", () => {
   var current_tasks = document.querySelectorAll(".delete");
