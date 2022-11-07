@@ -40,6 +40,7 @@ test("if input field is empty, display error", () => {
   }});
 
 
+<<<<<<< Updated upstream
 //don't know why this one isn't working-goes to the bottom?
 test("Checking an entry marks it as complete", () => {
   var current_tasks = document.querySelectorAll(".done");
@@ -50,6 +51,20 @@ test("Checking an entry marks it as complete", () => {
       }
   }});
 
+=======
+// don't know why this one isn't working-goes to the bottom?
+//test("Checking an entry marks it as complete", () => {
+ // var current_tasks = document.querySelectorAll(".done");
+ // for(var i=0; i<current_tasks.length; i++){
+  //    current_tasks[i].onclick = function(){
+//          this.parentNode.style.textDecoration ="line-through";
+ //         console.info(`Pass`);
+ //     }
+ // }});
+
+
+
+>>>>>>> Stashed changes
 test("Deleting an entry removes it from the list", () => {
   var current_tasks = document.querySelectorAll(".delete");
         for(var i=0; i<current_tasks.length; i++){
@@ -63,7 +78,19 @@ test("Deleting an entry removes it from the list", () => {
 
 
 
-
+test('done button adds a line through',()=>{
+  const button = document.getElementById('push');
+  button.click();
+  const button2 = document.getElementById('done');
+  button2.click();
+  const listitem = document.getElementById('task');
+  if (listitem.style.textDecoration == "line-through") {
+    console.info(`Pass`);
+  } else {
+    
+    console.error(`Fail`);
+  }
+});
 
 
 

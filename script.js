@@ -8,14 +8,14 @@ document.querySelector('#push').onclick = function(){
 // Extracting the input value and adding buttons
     else{
         document.querySelector('#tasks').innerHTML += `
-            <div class="task">
+            <div class="task" id="task">
                 <span id="taskname">
                     ${document.querySelector('#newtask input').value}
                 </span>               
                 <button class="delete">
                     <i class="far fa-trash-alt"></i>
                 </button>
-                <button class="done">
+                <button class="done" id="done">
                     <i class="far fa-trash-alt"></i>
                 </button>
             </div>
