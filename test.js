@@ -30,15 +30,17 @@ test('when add button is clicked, display task in the div id=tasks',()=>{
   }
 });
 
-test("if input field is empty, display error", () => { //causing issues
-  document.querySelector('#push').onclick = function(){
-    if(document.querySelector('#newtask input').value.length == 0){
-        alert("Please Enter a Task")
-        console.info(`Pass`);
-    }
-      //it goes to the bottom?
-      // ask about catch and try and assert
-  }}); //it works but doesn't display under, and when i comment out line 34 the add button works
+test('Inputting an empty string gives an error message',()=>{  
+  const taskInput = document.querySelector("input[name='task']");
+  taskInput.value = "";
+  const button = document.getElementById('push');
+  button.click();
+  if(document.querySelector('#newtask input').value.length == 0){
+    console.info('Pass');
+  } else {
+    console.error('Fail');
+  }
+});
 
 
 
