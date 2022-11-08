@@ -57,6 +57,17 @@ test('done button adds a line through and marks the task as complete',()=>{ //wo
   }
 });
 
+test("Clicking delete will remove a task from the list", () => {
+  const trashBtns = document.querySelectorAll(".delete");
+  trashBtns[0].click();
+  equal(trashBtns[0].offsetParent, null, "Task deleted from the list");
+  // if (equal(trashBtns[0].offsetParent, null) {
+  //   console.info(`Pass`);
+  // } else {
+  //   console.error(`Fail`);
+  // }
+});
+
 // test("Deleting an entry removes it from the list", () => {
 //   const button = document.getElementById('push');
 //   button.click();
