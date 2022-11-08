@@ -1,6 +1,7 @@
 User story:
 
-Ref testingproj.JPG image here
+![testingproj](https://user-images.githubusercontent.com/78818760/200641942-d1dc4ca2-1223-41fc-a58f-645cf45a0cf7.JPG)
+
 
 1) Creating an empty array to add to do's to (Test- is there an array present)
 2) Creating an input box under to allow for user input 
