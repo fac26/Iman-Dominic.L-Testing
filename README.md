@@ -1,6 +1,7 @@
 User story:
 
-![testingproj](https://user-images.githubusercontent.com/78818760/200641942-d1dc4ca2-1223-41fc-a58f-645cf45a0cf7.JPG)
+![image](https://user-images.githubusercontent.com/78818760/200645408-b7fa6c68-459e-437e-9678-8e5260eb97a1.png)
+
 
 
 1) Creating an empty array to add to do's to (Test- is there an array present)
