@@ -36,7 +36,6 @@ test('Inputting an empty string gives an error message',()=>{  //works
   const taskInput = document.getElementById("mytask").value;
   const button = document.getElementById('push');
   button.click();
-  //taskInput.value = "";
   const compare = "";
   equal(taskInput, compare, "Error message raised when empty string detected");
  }); 
@@ -82,7 +81,6 @@ test('The done button adds a line through and marks the task as complete',()=>{ 
   }
 });
 
-//add accessibility one too
 
 
 
