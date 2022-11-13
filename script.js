@@ -1,13 +1,20 @@
 //Create the functions here including a function for test
 
 // Section covering the error message
-document.querySelector('#push').onclick = function(){
+const addBtn = document.getElementById("push");
+addBtn.addEventListener("click", raiseError);
+
+function raiseError() {
     if(document.querySelector('#newtask input').value.length == 0){
         window.alert("Please Enter a Task")
         return false
     }
 // Extracting the input value and adding buttons
     else{
+        entertask();
+    }
+
+function entertask() {
         document.querySelector('#tasks').innerHTML += `
             <div class="task" id="task">
                 <span id="taskname">
@@ -21,6 +28,7 @@ document.querySelector('#push').onclick = function(){
                 </button>
             </div>
         `;
+
 
 //Defining the 'done' function        
       var current_tasks = document.querySelectorAll(".done");
