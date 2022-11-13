@@ -1,7 +1,9 @@
+Please click the link below to view the page and open the console to view the tests (right click on page -> inspect -> console)
+https://fac26.github.io/Iman-Dominic.L-Testing/
+
 User story:
 
 ![image](https://user-images.githubusercontent.com/78818760/200645408-b7fa6c68-459e-437e-9678-8e5260eb97a1.png)
-
 
 
 1) Creating an empty array to add to do's to (Test- is there an array present)
