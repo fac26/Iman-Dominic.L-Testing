@@ -14,3 +14,6 @@ User story:
 6) Delete button - when clicked on, does it remove the entry from the array.
 7) Delete button should only appear after entry is made into the array.
 8) Test (delete button shouldn't delete the wrong row, same for the done button.)
+
+Accessibility:
+Buttons can be activated when switching to them using tab and pressing enter.
