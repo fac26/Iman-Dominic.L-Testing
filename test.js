@@ -32,6 +32,7 @@ test('when add button is clicked, display task in the div id=tasks',()=>{
 
 
 test('Inputting an empty string gives an error message',()=>{  //works
+  window.alert = function() {}; 
   const taskInput = document.getElementById("mytask").value;
   const button = document.getElementById('push');
   button.click();
