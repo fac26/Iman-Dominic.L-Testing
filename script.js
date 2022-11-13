@@ -3,7 +3,8 @@
 // Section covering the error message
 document.querySelector('#push').onclick = function(){
     if(document.querySelector('#newtask input').value.length == 0){
-        alert("Please Enter a Task")
+        window.alert("Please Enter a Task")
+        return false
     }
 // Extracting the input value and adding buttons
     else{

@@ -30,19 +30,33 @@ test('when add button is clicked, display task in the div id=tasks',()=>{
   }
 });
 
-test('Inputting an empty string gives an error message',()=>{  
-  const taskInput = document.querySelector("input[name='task']");
-  taskInput.value = "";
+// test('Inputting an empty string gives an error message',()=>{  
+//   const taskInput = document.querySelector("input[name='task']");
+//   taskInput.value = "";
+//   const button = document.getElementById('push');
+//   button.click();
+//   window.alert = function() {};
+//   if(document.querySelector('#newtask input').value.length == 0){
+//     console.info('Pass');
+//   } else {
+//     console.error('Fail');
+//   }
+// });
+
+test('The add button does not add an empty string to list',()=>{
+  window.alert = function() {}; 
+  const taskInput2 = document.querySelector("input[name='task']");
+  taskInput2.value = "";
   const button = document.getElementById('push');
   button.click();
-  if(document.querySelector('#newtask input').value.length == 0){
-    console.info('Pass');
+  let result = document.querySelector("#tasks");
+  if (taskInput2.value == result.textContent.slice(51,56)) {
+    console.error(`Fail`);
   } else {
-    console.error('Fail');
+    
+    console.info(`Pass`);
   }
 });
-
-
 
 test('done button adds a line through and marks the task as complete',()=>{ //works 
   const button = document.getElementById('push');
@@ -60,6 +74,7 @@ test('done button adds a line through and marks the task as complete',()=>{ //wo
 test("Clicking delete will remove a task from the list", () => {
   const trashBtns = document.querySelectorAll(".delete");
   trashBtns[0].click();
+  trashBtns[1].click();
   equal(trashBtns[0].offsetParent, null, "Task deleted from the list");
   // if (equal(trashBtns[0].offsetParent, null) {
   //   console.info(`Pass`);
