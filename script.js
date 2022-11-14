@@ -1,13 +1,10 @@
-//Create the functions here including a function for test
-
 // Section covering the error message
 const addBtn = document.getElementById("push");
 addBtn.addEventListener("click", raiseError);
 
 function raiseError() {
     if(document.querySelector('#newtask input').value.length == 0){
-        window.alert("Please Enter a Task")
-        return false
+        window.alert("Please Enter a Task");
     }
 // Extracting the input value and adding buttons
     else{
