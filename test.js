@@ -81,7 +81,13 @@ test('The done button adds a line through and marks the task as complete',()=>{ 
   }
 });
 
-
+test("Leaves to do list empty", () => {
+  const taskInput = document.getElementById("mytask");
+  taskInput.value = "";
+  const trashBtns = document.querySelectorAll(".delete");
+  trashBtns[0].click();
+  equal(trashBtns[0].offsetParent, null, "The list is empty");
+});
 
 
 
