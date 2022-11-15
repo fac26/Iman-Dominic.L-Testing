@@ -32,7 +32,6 @@ test('when add button is clicked, display task in the div id=tasks',()=>{
 
 
 test('Inputting an empty string gives an error message',()=>{  //works
-  window.alert = function() {}; 
   const taskInput = document.getElementById("mytask").value;
   const button = document.getElementById('push');
   button.click();
@@ -42,7 +41,6 @@ test('Inputting an empty string gives an error message',()=>{  //works
   
 
 test('The add button does not add an empty string to list',()=>{ //works
-  window.alert = function() {}; 
   const taskInput2 = document.querySelector("input[name='task']");
   taskInput2.value = "";
   const button = document.getElementById('push');
@@ -81,7 +79,13 @@ test('The done button adds a line through and marks the task as complete',()=>{ 
   }
 });
 
-
+test("Leaves to do list empty", () => {
+  const taskInput = document.getElementById("mytask");
+  taskInput.value = "";
+  const trashBtns = document.querySelectorAll(".delete");
+  trashBtns[0].click();
+  equal(trashBtns[0].offsetParent, null, "The list is empty");
+});
 
 
 
