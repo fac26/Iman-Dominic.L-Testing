@@ -32,7 +32,6 @@ test('when add button is clicked, display task in the div id=tasks',()=>{
 
 
 test('Inputting an empty string gives an error message',()=>{  //works
-  window.alert = function() {}; 
   const taskInput = document.getElementById("mytask").value;
   const button = document.getElementById('push');
   button.click();
@@ -40,20 +39,6 @@ test('Inputting an empty string gives an error message',()=>{  //works
   equal(taskInput, compare, "Error message raised when empty string detected");
  }); 
   
-
-test('The add button does not add an empty string to list',()=>{ //works
-  window.alert = function() {}; 
-  const taskInput2 = document.querySelector("input[name='task']");
-  taskInput2.value = "";
-  const button = document.getElementById('push');
-  button.click();
-  let result = document.querySelector("#tasks");
-  if (taskInput2.value == result.textContent.slice(51,56)) {
-    console.error(`Fail: List contains empty input`);
-  } else {
-    console.info(`Pass: List does not contain empty input`);
-  }
-});
 
 test("Clicking delete will remove a task from the list", () => {
   const trashBtns = document.querySelectorAll(".delete");
@@ -81,44 +66,11 @@ test('The done button adds a line through and marks the task as complete',()=>{ 
   }
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// test("Deleting an entry removes it from the list", () => {
-//   const button = document.getElementById('push');
-//   button.click();
-//   const delbutton = document.getElementById("delete");
-//   delbutton.click();
-//   if (current_tasks.length - 1) {}
-//   var current_tasks = document.querySelectorAll(".delete");
-//         for(var i=0; i<current_tasks.length; i++){
-//             current_tasks[i].onclick = function(){
-//               if(this.parentNode.remove()) {
-//                 console.info(`Pass`);
-//             }
-//           }
-//         }});
+//Without the test below, then you would get a completed task
+test("Leaves to do list empty", () => {
+  const taskInput = document.getElementById("mytask");
+  taskInput.value = "";
+  const trashBtns = document.querySelectorAll(".delete");
+  trashBtns[0].click();
+  equal(trashBtns[0].offsetParent, null, "The list is empty");
+});
