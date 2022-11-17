@@ -97,7 +97,7 @@ h1{
 .task button.done{
       background-image: url("https://i.pinimg.com/originals/72/bc/c0/72bcc094f146262fc26464c300253c87.jpg");
       background-position: center center;
-  background-size: 40px 40px;
+    background-size: 40px 40px;
     background-color: green;
     color: #ffffff;
     height: 100%;

@@ -15,9 +15,18 @@
         <div id="newtask">
             <input id="mytask" type="text" maxlength="40" name="task" placeholder="Task to be done..">
             <button id="push">Add</button>
+            <!-- adding filter options -->
+            <div class="select">
+                <select name="todos" class="filter_todo">
+                  <option value="all">All</option>
+                  <option value="completed">Completed</option>
+                  <option value="incompleted">Incompleted</option>
+                </select>
         </div>     
       <!--task list area-->
-        <div id="tasks"></div>
+        <div id="tasks">
+            <ul class="todo_list"></ul>
+        </div>
     </div>
     <script src="../test-helpers.js"></script>
 <script src="script.js"></script>

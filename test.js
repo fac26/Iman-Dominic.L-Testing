@@ -12,7 +12,7 @@ test("Should add taskinput to list", () => { //works
   // verify that the page contains the expected result
   let result = document.querySelector("#tasks");
   
-  equal(result.textContent.slice(51, 56), taskInput.value);
+  equal(result.textContent.slice(73, 78), taskInput.value);
   
   // reset test data would allow for error message to work for empty input
   taskInput.value = "";
