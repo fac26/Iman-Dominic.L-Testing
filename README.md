@@ -1,6 +1,6 @@
 # Project description:
 
-Our project is designed to help people manage their commitments and work their way through projects efficently. It was created as part of the Founders and Coders Skills Bootcamp, to improve our knowledge in testing such as unit testing and test-driven development (TDD).  
+Our project is designed to help people manage their commitments and work their way through projects efficiently. It was created as part of the Founders and Coders Skills Bootcamp, to improve our knowledge in testing such as unit testing and test-driven development (TDD).  
 
 Please click the link below to view the page and open the console to view the tests (right click on page -> inspect -> console)
 https://fac26.github.io/Iman-Dominic.L-Testing/
